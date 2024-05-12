@@ -1,0 +1,290 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+@import 'src/app/modules/share/styles/_mixin.scss';
+
+.footer-nav-wrapper {
+
+  width: 100%;
+  height: auto;
+  background-color: #2d3436;
+  position: relative;
+
+  .custom-footer-divider-top {
+    // margin-top: 50px;
+    // transform: scaleX(-1);
+    @include section-divider(#ffffff, bottom);
+  }
+  .active-route {
+    color: $primary-color;
+  }
+  .container {
+
+    // height: 300px;
+    .row {
+      // height: 300px;
+      // background-color: #ffffff;
+
+      .copyr {
+        p {
+          // margin-top: 200px;
+          color: #7f8fa6;
+        }
+      }
+
+      .desc {
+        p {
+          // margin-top: 200px;
+          color: #7f8fa6;
+        }
+      }
+    }
+
+
+    .nav-links {
+      height:  300px;
+      height: auto;
+
+
+      .any-idea,
+      .material,
+      .library,
+      .contact-us {
+        color: #ffffff;
+
+        .icon-wrapper{
+          padding: 10px 40px;
+        }
+
+        h3 {
+          margin-top: 80px;
+          text-align: start;
+          font-size: 22px;
+          font-weight: 500;
+        }
+        p {
+          color: #c8d6e5;
+          font-weight: 500;
+        }
+        i {
+          font-size: 20px;
+          cursor: pointer;
+        }
+        i:hover{
+          color:$primary-color;
+        }
+
+        ul {
+          list-style-type: none;
+          margin: 0%;
+          padding: 0%;
+
+        }
+        li {
+
+        }
+        a{
+          text-decoration: none;
+          color:#c8d6e5;
+
+        }
+        a:hover{
+          color:$primary-color;
+        }
+
+
+      }
+    }
+  }
+}
+.pointer{
+  cursor: pointer;
+}
+.hr{
+  color: #ffffff;
+}
+
+@media (min-width:1400px){
+  .footer-nav-wrapper {
+
+    width: 100%;
+    height: auto;
+    background-color: #2d3436;
+    position: relative;
+
+
+
+    .container {
+      .copy{
+        p{
+          font-size: 20px;
+        }
+      }
+
+      // height: 300px;
+      .row {
+        // height: 300px;
+        // background-color: #ffffff;
+
+        .copyr {
+          p {
+            // margin-top: 200px;
+            color: #7f8fa6;
+          }
+        }
+
+        .desc {
+          p {
+            // margin-top: 200px;
+            color: #7f8fa6;
+          }
+        }
+      }
+
+
+      .nav-links {
+        height:  300px;
+        height: auto;
+
+
+        .any-idea,
+        .material,
+        .library,
+        .contact-us {
+          color: #ffffff;
+
+          .icon-wrapper{
+            padding: 10px 40px;
+          }
+
+          h3 {
+            margin-top: 80px;
+            text-align: start;
+            font-size: 30px;
+            font-weight: 500;
+          }
+          p {
+            color: #c8d6e5;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.5;
+          }
+          i {
+            font-size: 30px;
+            cursor: pointer;
+          }
+          i:hover{
+            color:$primary-color;
+          }
+
+          ul {
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+
+          }
+          li {
+            font-size: 20px;
+          }
+          a{
+            text-decoration: none;
+            color:#c8d6e5;
+            font-size: 20px;
+
+          }
+          a:hover{
+            color:$primary-color;
+          }
+
+
+        }
+      }
+    }
+  }
+  .pointer{
+    cursor: pointer;
+  }
+  .hr{
+    color: #ffffff;
+  }
+}
+
+
+@media (max-width:576px) {
+  .footer-nav-wrapper {
+
+
+    .container {
+
+      // height: 300px;
+      .copy{
+        margin-top: 30px;
+      }
+      .row {
+        // height: 300px;
+
+        .copyr {
+          p {
+            // margin-top: 30px;
+          }
+        }
+
+        .desc {
+          p {
+
+          }
+        }
+      }
+
+      .nav-links {
+
+
+
+        .any-idea,
+        .material,
+        .library,
+        .contact-us {
+
+          .icon-wrapper{
+
+          }
+
+          h3 {
+            margin-top: 20px;
+
+
+          }
+          p {
+
+          }
+          i {
+
+
+          }
+          i:hover{
+
+          }
+
+          ul {
+
+
+          }
+          li {
+
+          }
+          a{
+
+          }
+          a:hover{
+
+
+
+        }
+      }
+      .any-idea{
+        h3{
+          margin-top: 80px;
+        }
+      }
+    }
+  }
+}
+}

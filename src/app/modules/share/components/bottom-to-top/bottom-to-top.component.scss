@@ -1,0 +1,43 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+@import 'src/app/modules/share/styles/_mixin.scss';
+
+.top-to-bottom-outer {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  height: 100vh; /* Ensure the container covers the entire viewport height */
+  height: auto;
+}
+
+.top-to-bottom-inner {
+   i {
+    position: absolute;
+    font-size: 60px;
+    color: $primary-color;
+    bottom: 35px;
+    right: 0;
+    margin-bottom: 20px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  i:hover{
+
+
+  }
+}
+
+
+
+
+@media (max-width:576px){
+  .top-to-bottom-outer {
+  }
+  .top-to-bottom-inner {
+  }
+  .top-to-bottom-inner i {
+    bottom: 0;
+    right: 0;
+    margin-bottom: 20px; /* Adjust as needed */
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,17 @@
+.outer {
+  max-width: 100%;
+  .inner {
+    .container {
+      .row {
+        .col-table{
+          overflow-x: scroll;
+          // border: 1px solid red;
+        }
+        .mat-elevation-z8 {
+        }
+      }
+    }
+
+  }
+}
+

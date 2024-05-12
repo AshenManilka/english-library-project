@@ -1,0 +1,11 @@
+.outer{
+  .inner{
+    .container{
+      .row{
+        .col-table{
+          overflow-x: scroll;
+        }
+      }
+    }
+  }
+}

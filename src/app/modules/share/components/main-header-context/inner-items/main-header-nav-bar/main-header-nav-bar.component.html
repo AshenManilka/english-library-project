@@ -1,0 +1,80 @@
+<app-loading-spinner > </app-loading-spinner>
+
+
+
+<nav class="  navbar navbar-expand-lg fixed-top navbar-light bg-transparent"  [ngClass]="{'bg-light': navbarState === 'otherComponent'}" id="navbar-avo">
+  <div class="container">
+    <div  class=" navbar-brand navbar-brand-avo " id="nav-barnd " href="#">
+      <img src="https://firebasestorage.googleapis.com/v0/b/english-library-aa877.appspot.com/o/appResources%2Ffavicon-64px.png?alt=media&token=a802666c-726c-4df1-85cd-911624f4356b"  alt="fav">
+      <h6 *ngIf="transparent && !otherComp "   > Since 2018 </h6>
+    </div>
+    <button class="navbar-toggler nav-btn" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span id="menu-button"> MENU </span>
+    </button>
+    <div class="nav-li collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+        <li class="ps-4 nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/client/home" routerLinkActive="active-route"
+            (click)="collapseNavbar()">HOME</a>
+        </li>
+        <li class="ps-4 nav-item">
+          <a class="nav-link" routerLink="/client/about-us" routerLinkActive="active-route"
+            (click)="collapseNavbar()">ABOUT US</a>
+        </li>
+
+
+        <li class="ps-4 nav-item">
+          <a class="nav-link" routerLink="/client/home" (click)="scrollToSection('review')">REVIEWS</a>
+        </li>
+
+
+        <div class="dropdown" [ngClass]="{'d-none': navbarState === 'otherComponent'}">
+          <div class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            BOOKS
+          </div>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li class="ps-4 ff nav-item">
+              <a class="dropdown-item" (click)="scrollToSection('freeBook')">FREE BOOKS</a>
+            </li>
+            <li class="ps-4 nav-item">
+              <a class="dropdown-item" (click)="scrollToSection('grammar')">GRAMMAR</a>
+            </li>
+            <li class="ps-4 nav-item">
+              <a class="dropdown-item" (click)="scrollToSection('sentencePatterns')">SENTENCE PATTERNS</a>
+            </li>
+            <li class="ps-4 nav-item">
+              <a class="dropdown-item" (click)="scrollToSection('dialogues')">DIALOGUES</a>
+            </li>
+            <li class="ps-4 nav-item">
+              <a class="dropdown-item" (click)="scrollToSection('videoLessons')">VIDEO LESSONS</a>
+            </li>
+          </ul>
+        </div>
+
+      </ul>
+
+       <!-- <div *ngIf="!userEmail" class="btn-login none" (click)="collapseNavbar()" routerLink="/security/login"> LogIn </div>
+       <div  *ngIf="userEmail" class="btn-logout none" (click)="logOut()"> LogOut </div> -->
+
+       <div class="nav-buttons-sm d-lg-none d-xl-none d-xxl-none">
+        <div class="LMS-btn" routerLink="/dashboard/playground/general-activities/activities/books/free-books">Access LMS</div>
+        <div class="log-btn"  *ngIf="userEmail"(click)="logOut()"> LogOut </div>
+        <div  class="log-btn" *ngIf="!userEmail"  (click)="collapseNavbar()" routerLink="/security/login"> LogIn </div>
+      </div>
+
+      </div>
+
+    <div class="nav-buttons">
+      <div class="LMS-btn" routerLink="/dashboard/playground/general-activities/activities/books/free-books">Access LMS</div>
+      <div class="log-btn"  *ngIf="userEmail"(click)="logOut()"> LogOut </div>
+      <div  class="log-btn" *ngIf="!userEmail"  (click)="collapseNavbar()" routerLink="/security/login"> LogIn </div>
+    </div>
+
+  </div>
+
+</nav>
+<!-- btn-logout -->
+<!-- btn-login -->

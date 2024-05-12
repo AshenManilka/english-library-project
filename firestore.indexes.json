@@ -1,0 +1,19 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "Books",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "bookCategory",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "bookName",
+          "order": "ASCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

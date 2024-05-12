@@ -1,0 +1,126 @@
+<!------------ Navbar start------------------>
+<nav class="main-data-outer"  [class.move-nav]="isSlideDrawerOpen">
+  <div class="inner-outer" >
+    <div class="left-outer">
+      <div class="ham-wrapper" *ngIf="!isSlideDrawerOpen">
+        <button type="button" class="bx bx-menu nav-btn" id="sidebar-open" (click)="toggleClass()"><i></i></button>
+      </div>
+      <!-- <div class="search-icon-wrapper" >
+        <mat-icon >search</mat-icon>
+      </div> -->
+    </div>
+    <div class="right-outer"  [class.display-view]="isSlideDrawerOpen"  >
+      <!-- <div class=" item notification">
+        <mat-icon fontSet="material-icons-outlined"  matBadge="15" matBadgeColor="accent">notifications</mat-icon>
+
+          <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+          </span>
+      </div>
+      <div class=" item mail">
+        <mat-icon fontSet="material-icons-outlined" matBadge="10" matBadgeColor="accent" >mail</mat-icon>
+
+          <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+          </span>
+      </div> -->
+
+      <div mat-button [matMenuTriggerFor]="menu" class="user-wrapper " >
+
+        <div class="user-name">
+           {{userFullName}}
+        </div>
+
+        <div class="user-image ">
+          <img [src]="avatar" alt="avata">
+        </div>
+
+      </div>
+
+
+      <mat-menu #menu="matMenu">
+
+        <button mat-menu-item (click)="userProfile()" >
+          <div class="nav-menu flex">
+            <i class="bx bx-user bx-flashing-hover  " style="margin-right: 10px;"></i>
+            <span > Profile </span>
+          </div>
+        </button>
+
+        <button mat-menu-item (click)="logOut()" >
+          <div class="nav-menu flex" >
+            <i class="bx bx-log-out bx-flashing-hover  " style="margin-right: 10px;"></i>
+            <span > Log Out</span>
+          </div>
+        </button>
+
+      </mat-menu>
+
+    </div>
+  </div>
+</nav>
+<!------------ Navbar end------------------>
+
+<!------------ slide drawer start------------------>
+  <nav  class="sidebar" [ngClass]="{'close': !isSlideDrawerOpen}" (mouseenter)="onMouseToggle(true)" (mouseleave)="onMouseToggle(false)"  >
+    <div class="logo_items flex">
+      <span class="nav_image" routerLink="/client/home" (click)="sliderState=!sliderState" >
+        <img src="https://firebasestorage.googleapis.com/v0/b/anyideainenglish-app.appspot.com/o/appResources%2Flogo-small-image.png?alt=media&token=2f1a4eda-ee75-4276-82fb-31214f0a3337" alt="logo_img" />
+      </span>
+      <span class="logo_name">A I I E</span>
+      <button type="button" class="bx bx-x nav-btn" id="sidebar-close" (click)="toggleClass()" ></button>
+    </div>
+
+    <div class="menu_container" (scroll)="onScroll($event)">
+      <div class="menu_items " [ngClass]="{'menu_items_slider_open':isSlideDrawerOpen}" >
+
+        <ul class="menu_item"   routerLink="/console/playground/home" (click)="toggleClass()"  >
+          <div class="menu_title flex" >
+            <span  class="title">CONSOLE</span>
+            <i class="bx bx-home-alt icon"  routerLink="/console/playground/home" routerLinkActive="active-title"></i>
+          </div>
+        </ul>
+
+        <ul class="menu_item">
+          <div class="menu_title flex" (click)="toggleSliderStateGeneralActivities()" >
+            <span class="title">GENERAL ACTIVITIES</span>
+            <span class="line"  [hidden]="sliderStateGeneralActivities"></span>
+          </div>
+
+          <div  >
+
+            <li class="item"  routerLink="/console/playground/general-activities/activities/books" routerLinkActive="active" (click)="toggleClass()">
+              <div  class="link flex">
+                <i class="bx bx-book-reader bx-flashing-hover "></i>
+                <span>Books</span>
+              </div>
+            </li>
+
+            <li class="item"  routerLink="/console/playground/general-activities/activities/videos" routerLinkActive="active" (click)="toggleClass()" >
+              <div  class="link flex">
+                <i class="bx bx-movie-play bx-flashing-hover " ></i>
+                <span>Videos</span>
+              </div>
+            </li>
+
+            <li class="item" routerLink="/console/playground/general-activities/activities/user/" routerLinkActive="active"(click)="toggleClass()" >
+              <div  class="link flex">
+                <i class="bx bx-user bx-flashing-hover "></i>
+                <span>User</span>
+              </div>
+            </li>
+
+          </div>
+
+        </ul>
+
+
+      </div>
+    </div>
+  </nav>
+<!------------ slide drawer end------------------>
+
+
+
+
+

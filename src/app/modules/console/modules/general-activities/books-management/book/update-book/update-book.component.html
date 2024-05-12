@@ -1,0 +1,80 @@
+<app-loading-spinner> </app-loading-spinner>
+
+<div class="outer">
+  <div class="inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="fw-bold">Update Book</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <form [formGroup]="updateBooksForm" class="d-grid" (ngSubmit)="updateBook()" (load)="loadBooks()">
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <mat-form-field appearance="outline" class="w-100" >
+                  <mat-label>Book Id</mat-label>
+                  <input matInput formControlName="bookId"  readonly />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-4">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Book Name</mat-label>
+                  <input matInput formControlName="bookName" />
+                </mat-form-field>
+              </div>
+              <div class="col-12 col-lg-4">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Select Book Category</mat-label>
+                  <mat-select formControlName="bookCategory">
+                    <mat-option value="FREE">Free</mat-option>
+                    <mat-option value="GRAMMAR">Grammar</mat-option>
+                    <mat-option value="SENTENCE PATTERN">Sentence Pattern</mat-option>
+                    <mat-option value="DIALOGUES">Dialogue</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-12 col-lg-4">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Pages</mat-label>
+                  <input matInput formControlName="pages"/>
+                </mat-form-field>
+              </div>
+            </div>
+            <label class="mb-1 fw-normal" for="bookPreviewImage">Book Preview Image</label>
+            <input
+              id="bookPreviewImage"
+              type="file"
+              (change)="onFileChange($event, 'previewImage')"
+              formControlName="bookPreviewImage"
+              class="input-field mb-4"
+              required
+            />
+
+            <label class="mb-1 fw-normal" for="bookResource">Book Resource</label>
+            <input
+              id="bookResource"
+              type="file"
+              (change)="onFileChange($event, 'bookResource')"
+              formControlName="bookResource"
+              class="input-field mb-4"
+              required
+            />
+
+            <div class="row">
+              <div class="col-12 d-flex gap-1">
+                <button mat-raised-button color="primary" type="submit" [disabled]="updateBooksForm.invalid">
+                  Update Book
+                </button>
+                <button mat-raised-button color="warn" type="reset">Reset Form</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

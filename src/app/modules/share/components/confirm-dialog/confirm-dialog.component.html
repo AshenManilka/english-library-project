@@ -1,0 +1,14 @@
+<div class="outer" style=" border-radius:5px;  background-color:transparent !important;">
+  <h1 mat-dialog-title  style="color: #000000; font-weight: bold; display: flex; justify-content: center ; align-items: center; background-color: transparent;">
+    <i class='bx bx-log-out-circle bx-fade-left bx-md ' ></i>
+    Confirm Logout
+  </h1>
+  <div mat-dialog-content style="font-size: 16x; font-weight: 600; background-color: transparent;">{{ data.message }}</div>
+  <div mat-dialog-actions style="display: flex; justify-content: flex-end ; align-items: flex-end; background-color: transparent;">
+    <div class="button-outer"  >
+      <button mat-button (click)="onNoClick()">No</button>
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Yes</button>
+    </div>
+  </div>
+</div>
+

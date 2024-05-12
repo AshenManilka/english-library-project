@@ -1,0 +1,73 @@
+$login-btn: #16a085;
+$register-btn: #1abc9c;
+$btn-font-color: #FFFFFF;
+
+.outer{
+  width: 100%;
+  height: 100vh;
+  .inner{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left-image{
+      width: 80%;
+    }
+
+    .right{
+
+      .title{letter-spacing: 5px}
+      .sub-title{letter-spacing: 3px}
+    }
+  }
+}
+
+.login-btn{
+  background: $login-btn!important;
+  color: $btn-font-color!important;
+}
+.register-btn {
+  background: $register-btn!important;
+  color: $btn-font-color!important;
+}
+
+.google-btn{
+  background-color: red;
+  width: 50px;
+  height: 60px;
+  border-radius: 100%;
+}
+.bxl-google{
+  font-size: 40px;
+}
+
+@media (max-width:576px){
+  .outer{
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    padding: 5px 0;
+    .inner{
+
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .left-image{
+
+        width: 80%;
+
+      }
+
+      .right{
+
+        .title{letter-spacing: 5px}
+        .sub-title{letter-spacing: 3px}
+      }
+    }
+  }
+}
+

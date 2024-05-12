@@ -1,0 +1,11 @@
+<app-loading-spinner> </app-loading-spinner>
+
+<div *ngIf="displayAlert" class="alert">
+  <app-alert></app-alert>
+  </div>
+
+
+<div class="books" >
+  <app-book-display id="grammar" [books]="grammarBooks" [paid]="paid" ></app-book-display>
+
+</div>

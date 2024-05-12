@@ -1,0 +1,38 @@
+<app-loading-spinner> </app-loading-spinner>
+<div class="outer">
+  <div class="inner py-2">
+    <div class="container">
+      <div class="row">
+        <form [formGroup]="form" (ngSubmit)="createVideo()" class="d-grid">
+          <div class="row">
+            <div class="col-12 col-lg-3">
+              <input type="file" (change)="onFileChange($event)"
+                     formControlName="thumbnail" class="input-field mb-4 w-100">
+            </div>
+            <div class="col-12 col-lg-3">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Video Title</mat-label>
+                <input matInput type="text" placeholder="Video Title" formControlName="title">
+              </mat-form-field>
+            </div>
+            <div class="col-12 col-lg-6">
+              <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Video Url</mat-label>
+                <input matInput formControlName="url">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex gap-1 justify-content-end">
+              <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Save
+                Video
+              </button>
+              <button mat-raised-button color="warn" type="reset">Reset Form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

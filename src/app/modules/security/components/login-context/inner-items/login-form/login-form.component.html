@@ -1,0 +1,98 @@
+<app-loading-spinner></app-loading-spinner>
+
+<div class="outer">
+  <div class="inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8 col-md-6 left align-items-center justify-content-center d-flex">
+          <img
+            class="left-image"
+            src="https://firebasestorage.googleapis.com/v0/b/anyideainenglish-app.appspot.com/o/appResources%2Flogin-image.jpg?alt=media&token=657e1eee-34b2-44f0-bc36-86029b29e1f1"
+            alt="LoginImage">
+        </div>
+        <div class="col-12 col-lg-4 col-md-6 right align-items-center justify-content-center d-flex flex-column">
+          <form [formGroup]="loginForm" (ngSubmit)="login()" class="w-100">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="fs-1 fw-bolder title">LOGIN</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <h6 class="fw-bold sub-title">Enter Your Email & Password To Login</h6>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field class="w-100" appearance="outline">
+                  <mat-label>Email</mat-label>
+                  <input matInput formControlName="email" id="email" required>
+                  <mat-icon matSuffix>email</mat-icon>
+                </mat-form-field>
+              </div>
+              <span
+                *ngIf="getEmail()?.invalid && (getEmail()?.dirty || getEmail()?.touched)"
+                class="text-danger"
+              >
+                <p *ngIf="getEmail()?.errors?.['required']">Email is required.</p>
+                <p *ngIf="getEmail()?.errors?.['email']">Wrong Email Address Type</p>
+              </span>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field class="w-100" appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput formControlName="password">
+                  <mat-icon matSuffix>password</mat-icon>
+                </mat-form-field>
+              </div>
+
+              <span
+                *ngIf="getPassword()?.invalid && (getPassword()?.dirty || getPassword()?.touched)"
+                class="text-danger"
+              >
+                <p *ngIf="getPassword()?.errors?.['required']">password is required.</p>
+                <p *ngIf="getPassword()?.errors?.['minlength']">Password must be at least 6 characters long.</p>
+              </span>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+                <mat-checkbox color="primary" class="fw-bolder" formControlName="rememberMe" (change)="toggleRememberMe()">Remember Me</mat-checkbox>
+                <button mat-button routerLink="/security/forgot-password">forgot password?</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button
+                  mat-raised-button
+                  class="login-btn w-100"
+                  type="submit"
+                  [disabled]="loginForm.invalid"
+                >Login
+                </button>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-12  d-flex justify-content-start">
+                <button mat-button class="my-2 text-dark" disabled>Don't Have An Account?</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button mat-raised-button type="button" class="w-100 register-btn" routerLink="/security/register">
+                  Register
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="w-100">
+            <div class="col-12 my-2 d-flex justify-content-start">
+              <button mat-button class="text-dark text-decoration-underline" routerLink="/security/resend-verification-email">Can't Login?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

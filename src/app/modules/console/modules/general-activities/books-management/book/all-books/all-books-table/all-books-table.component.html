@@ -1,0 +1,75 @@
+<app-loading-spinner> </app-loading-spinner>
+<div class="outer"  >
+  <div class="inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-2">
+          <mat-form-field appearance="outline" class="w-100">
+            <mat-label>Search Books By Book Name</mat-label>
+            <input matInput [(ngModel)]="bookName" (keyup)="loadBooks()" placeholder="Type The Book Name Here">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-table">
+          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No.</th>
+              <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }}</td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="bookId">
+              <th mat-header-cell *matHeaderCellDef> Book Id</th>
+              <td mat-cell *matCellDef="let element"> {{ element.bookId }}</td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="bookName">
+              <th mat-header-cell *matHeaderCellDef>Book Name</th>
+              <td mat-cell *matCellDef="let element"> {{ element.bookName }}</td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="category">
+              <th mat-header-cell *matHeaderCellDef>Book Category</th>
+              <td mat-cell *matCellDef="let element"> {{ element.bookCategory }}</td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="options">
+              <th mat-header-cell *matHeaderCellDef> Options</th>
+              <td mat-cell *matCellDef="let element">
+                <button mat-icon-button
+                        [routerLink]="['/console/playground/general-activities/activities/books/manage-books/all-books/manage-all-books/update-book',element.id]">
+                  <mat-icon color="accent">edit</mat-icon>
+                </button>
+
+                <button mat-icon-button (click)="deleteBook(element.id)">
+                  <mat-icon color="warn">delete</mat-icon>
+                </button>
+                <button mat-icon-button (click)="openBookDetailsDialog(element)">
+                  <mat-icon color="primary">open_in_new</mat-icon>
+                </button>
+              </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+        </div>
+        <div class="col-12">
+          <mat-divider></mat-divider>
+          <mat-paginator class="paginator"
+            [length]="totalBooks"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)"
+          ></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

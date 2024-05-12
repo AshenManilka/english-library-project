@@ -1,0 +1,39 @@
+<div id="{{ categoryTitle | lowercase }}" class="heading">
+  <h1>{{ categoryTitle }}</h1>
+
+</div>
+
+
+<div class="row" >
+  <div class="col-12 col-xl-3 col-md-4 col-sm-6 video-card-outer" *ngFor="let video of videos">
+
+    <div class="video-card-inner">
+      <div class="video-cover-image-outer">
+        <img [src]="video.thumbnail" alt="video cover image">
+      </div>
+      <div class="video-details-outer">
+        <div class="row">
+          <h2 class="video-title">{{ video.title }}</h2>
+        </div>
+        <div class="row video-data">
+          <div class="col-6">
+
+          </div>
+          <div class="col-6">
+            <div class="view-button-outer" >
+              <a [href]=" video.videoUrl">
+                <i class='bx bxl-youtube' style='color:#ff0000'   ></i>
+              </a>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+<!-- </div> -->
+

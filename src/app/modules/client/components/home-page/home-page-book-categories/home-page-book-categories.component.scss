@@ -1,0 +1,25 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+@import 'src/app/modules/share/styles/_mixin.scss';
+
+
+
+.book-category-wrapper {
+  max-width: 100vw;
+  position: relative;
+  min-height: 500px;
+  background-color: #F3F3F3 !important;
+  // margin-top: 50px;
+
+
+  .custom-shape-divider-top {
+    // margin-top: 50px;
+    @include section-divider(white, bottom);
+  }
+
+  .custom-shape-divider-bottom {
+    // margin-top: 50px;
+    @include section-divider(black, bottom);
+  }
+}
+
+

@@ -1,0 +1,88 @@
+<div class="footer-nav-wrapper" >
+  <!-- section divider -->
+
+  <div class="container">
+
+    <div class="row nav-links">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 any-idea">
+        <h3 > Any Idea In English </h3>
+        <p> Online book library offering books and videos, with English lessons explained in Sinhala. </p>
+        <div class="row icon-wrapper">
+
+          <div class="col-4">
+            <i class="fa-brands fa-twitter twitter"> </i>
+          </div>
+          <div class="col-4">
+            <i class="fa-brands fa-facebook facebook"> </i>
+          </div>
+          <div class="col-4">
+            <i class="fa-brands fa-instagram instagram"> </i>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 material">
+        <h3> Materials </h3>
+        <ul>
+          <li class="my-2"><span class="fa fa-chevron-right "></span> <a (click)="scrollToSection('freeBook')" class="pointer"> Free
+              Books</a></li>
+          <li class="my-2"><span class="fa fa-chevron-right "></span> <a (click)="scrollToSection('grammar')" class="pointer">
+              Grammer</a></li>
+          <li class="my-2"><span class="fa fa-chevron-right "></span> <a (click)="scrollToSection('sentencePatterns')"
+              class="pointer"> Sentence Patterns</a></li>
+          <li class="my-2"><span class="fa fa-chevron-right "></span> <a (click)="scrollToSection('dialogues')" class="pointer">
+              Dialogues</a></li>
+          <li class="my-2"><span class="fa fa-chevron-right "></span> <a (click)="scrollToSection('videoLessons')" class="pointer">
+              Video Lessons</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-2 library">
+        <h3> Library </h3>
+        <ul>
+          <li class="my-2"><span class="fa fa-chevron-right"></span><a routerLink="/client/home"   routerLinkActive="active-route" (click)="scrollToSection('#top')"> Home </a></li>
+          <li class="my-2"><span class="fa fa-chevron-right"></span><a routerLink="/client/about-us"   routerLinkActive="active-route" (click)="scrollToSection('#top')">  About Us </a></li>
+          <li class="my-2"><span class="fa fa-chevron-right"></span><a routerLink="/client/home"   (click)="scrollToSection('review')"
+              class="pointer"> Reviews </a></li>
+
+          <li class="my-2"><span class="fa fa-chevron-right"></span><a routerLink="/client/privacy-policy"   routerLinkActive="active-route" (click)="scrollToSection('#top')"> Privacy Policy </a></li>
+          <li class="my-2"><span class="fa fa-chevron-right"></span><a routerLink="/client/terms-of-use"   routerLinkActive="active-route" (click)="scrollToSection('#top')"> Terms Of Use </a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 contact-us">
+        <h3> Contact Us </h3>
+        <ul>
+          <li class="d-flex"><span class="icon fa fa-map "></span> <a class="ms-2">
+              <span>
+                <div class="add">
+                  <p>Address: No. 331/3 Kithalawa, Kuliyapitiya. </p>
+                </div>
+              </span>
+            </a></li>
+          <li><span class="icon fa fa-phone"></span> <a class="ms-2" href="#">078 370 3815</a>
+          </li>
+
+          <li><span class="icon fa-brands fa-whatsapp mt-3"></span> <a class="ms-2 mt-3"
+              href="https://api.whatsapp.com/send/?phone=94783703815&text=Send+me+details&type=phone_number&app_absent=0">078
+              370 3815</a></li>
+
+          <li><span class="icon fa-brands fa-whatsapp mt-3"></span> <a class="ms-2 mt-3"
+              href="https://api.whatsapp.com/send/?phone=94775186615&text=Send+me+details&type=phone_number&app_absent=0">077
+              518 6615</a></li>
+          <li><span class="icon fa fa-envelope mt-3"></span> <a class="ms-2 mt-3 pointer"> rasikajeewantha1ymax@gmail.com
+
+            </a></li>
+        </ul>
+      </div>
+    </div>
+   <hr class="hr">
+      <div class="row mt-2 copy">
+        <div class="copyr col-12 col-md-6">
+          <p>Copyright &copy; {{currentYear}} anyideainenglish.com</p>
+        </div>
+        <div class="desc col-12  col-md-6 d-flex justify-content-md-end">
+          <p>Designed by - info.avocado69@gmail.com</p>
+        </div>
+      </div>
+      <app-bottom-to-top></app-bottom-to-top>
+  </div>
+</div>

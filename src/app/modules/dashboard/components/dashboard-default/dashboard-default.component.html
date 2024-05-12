@@ -1,0 +1,10 @@
+<div class="context-admin" [ngClass]="{'adjust-context-admin':isSlideDrawerOpen}">
+  <!-- Iterate over userPaidBooks array and display book data -->
+  <div *ngFor="let book of userPaidBooks">
+    <img src="{{book.bookPreviewImage}}" alt="" width="200" height="300">
+    <h3>{{ book.bookName }}</h3>
+    <p>Author: {{ book.bookId }}</p>
+    <p>Category: {{ book.bookCategory }}</p>
+  </div>
+
+</div>

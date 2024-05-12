@@ -1,0 +1,19 @@
+<div class="context-outer" >
+  <div class="row row-outer">
+    <div class="col-12 col-md-3 col-left">
+      <div class="button-outer" >
+        <button mat-flat-button routerLink="./new-book"
+                routerLinkActive="active-route">New Book
+        </button>
+        <button mat-flat-button routerLink="./all-books"
+                routerLinkActive="active-route">All Books
+        </button>
+      </div>
+    </div>
+    <div class="col-12 col-md-9 col-right" >
+      <div class="right-inner">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

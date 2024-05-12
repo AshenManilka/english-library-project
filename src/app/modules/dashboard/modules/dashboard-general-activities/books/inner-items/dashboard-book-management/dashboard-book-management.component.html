@@ -1,0 +1,29 @@
+<section  class="deal-type-outer  context-outer">
+  <div class="context-inner" >
+    <div class="type-header">
+      <h2>MY BOOKS</h2>
+      <hr>
+    </div>
+    <div class="buttons-outer" >
+      <button mat-flat-button routerLink="./free-books" routerLinkActive="active-route">
+       FREE
+      </button>
+
+      <button mat-flat-button routerLink="./grammar" routerLinkActive="active-route">
+        GRAMMAR
+       </button>
+
+       <button mat-flat-button routerLink="./patterns" routerLinkActive="active-route">
+        SENTENCE PATTERNS
+       </button>
+
+       <button mat-flat-button routerLink="./dialogs" routerLinkActive="active-route">
+        DIALOGUES
+       </button>
+      <hr>
+    </div>
+    <div class="books-preview-outer">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>

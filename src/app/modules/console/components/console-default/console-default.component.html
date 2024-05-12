@@ -1,0 +1,165 @@
+<app-loading-spinner> </app-loading-spinner>
+<!-- static card section start -->
+<section class="statistics-card-outer " [ngClass]="{'adjust-statistics-card-outer':isSlideDrawerOpen}">
+  <div class="row" >
+    <div class="col-12  col-lg-3 col-md-4 col-sm-6 card " >
+      <div class="all-ernings card-wrapper">
+        <div class="card-top">
+          <div class="count">
+            <h3 class="fs-1 fw-bolder">{{ usersCount }}</h3>
+            <p class="fs-6 fw-bold">All Registered Users</p>
+          </div>
+          <div class="icon-wrapper">
+            <mat-icon fontSet="material-icons-outlined" style="">group</mat-icon>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="change-percentage">
+            <span>% Change</span>
+          </div>
+          <div class="derection-icon">
+            <mat-icon style="">trending_up</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-md-4 col-sm-6 card ">
+      <div class="page-views card-wrapper">
+        <div class="card-top">
+          <div class="count">
+            <h3 class="fs-1 fw-bolder">{{ booksCount }}</h3>
+            <p class="fs-6 fw-bold">All Books</p>
+          </div>
+          <div class="icon-wrapper">
+            <mat-icon fontSet="material-icons-outlined">menu_book</mat-icon>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="change-percentage">
+            <span>% Change</span>
+          </div>
+          <div class="derection-icon">
+            <mat-icon style="">trending_up</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-md-4 col-sm-6 card">
+      <div class="task-completed card-wrapper">
+        <div class="card-top">
+          <div class="count">
+            <h3 class="fs-1 fw-bolder">{{ videoCount }}</h3>
+            <p class="fs-6 fw-bold">All Videos</p>
+          </div>
+          <div class="icon-wrapper">
+            <mat-icon fontSet="material-icons-outlined" style="">play_circle</mat-icon>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="change-percentage">
+            <span>% Change</span>
+          </div>
+          <div class="derection-icon">
+            <mat-icon style="">trending_up</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 col-md-4 col-sm-6 card ">
+      <div class="downloads card-wrapper">
+        <div class="card-top" >
+          <div class="count">
+            <h3 class="fs-1 fw-bolder">{{ subscribeUserCount }}</h3>
+            <p class="fs-6 fw-bold">All Subscribed Users</p>
+          </div>
+          <div class="icon-wrapper">
+            <mat-icon fontSet="material-icons-outlined" style="">paid</mat-icon>
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="change-percentage">
+            <span>% Change</span>
+          </div>
+          <div class="derection-icon">
+            <mat-icon style="">trending_up</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- static card section end -->
+<!-- chart section start ------>
+<section class="chart-section-outer" [ngClass]="{'adjust-chart-section-outer':isSlideDrawerOpen}">
+  <div class="row">
+    <!-- total-income-table-start -->
+    <div class="col-lg-9 col-md-12 col-sm-12 chart-col tot-income-stat-chrat">
+      <div class="stat-chart-inner-wrapper px-2">
+        <div class="row row-header ">
+          <h3 class="fw-bolder" >Recent Logins</h3>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-2">
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-label>Search Users By Email</mat-label>
+              <input matInput [(ngModel)]="userEmail" (keyup)="loadRecentLoggedInUsers()" placeholder="Type The Book Name Here">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-table">
+            <table mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef> No.</th>
+                <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }}</td>
+              </ng-container>
+
+              <!-- Name Column -->
+              <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef> Email</th>
+                <td mat-cell *matCellDef="let element"> {{ element.email }}</td>
+              </ng-container>
+
+              <!-- Weight Column -->
+              <ng-container matColumnDef="fullName">
+                <th mat-header-cell *matHeaderCellDef> Full Name</th>
+                <td mat-cell *matCellDef="let element"> {{ element.fullName }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="phone">
+                <th mat-header-cell *matHeaderCellDef> Mobile</th>
+                <td mat-cell *matCellDef="let element"> {{ element.phone }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="loginTime">
+                <th mat-header-cell *matHeaderCellDef> Login Time</th>
+                <td mat-cell *matCellDef="let element" class=""><mat-chip class="mat-chip"> {{ element.loginTime | date:'yyyy-MM-dd HH:mm' }}</mat-chip></td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+          </div>
+          <div class="col-12 pb-3">
+            <mat-paginator [length]="totalRecentLoginUsers"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="onPageChange($event)"></mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-12 col-sm-12 chart-col overall-statistics-chart ">
+      <div class="overall-statistics-chart-inner-wrapper chart-inner-wrapper">
+        <div class="header-section">
+          <mat-calendar class="custom-calendar"></mat-calendar>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- chart section end ------>
+
+<router-outlet></router-outlet>
+

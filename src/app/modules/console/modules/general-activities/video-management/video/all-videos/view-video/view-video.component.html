@@ -1,0 +1,11 @@
+<mat-dialog-content class="dialog-content">
+  <mat-form-field class="w-100" appearance="outline">
+    <mat-label>Video Resource Url</mat-label>
+    <input matInput value="{{data.videoUrl}}" disabled class="text-field">
+  </mat-form-field>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-end">
+      <button mat-raised-button color="warn" (click)="closeDialog()">OK</button>
+    </div>
+  </div>
+</mat-dialog-content>

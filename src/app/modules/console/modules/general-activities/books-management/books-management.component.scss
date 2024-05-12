@@ -1,0 +1,47 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+
+.context-outer{
+  max-width:100vw;
+  min-height: 250px;
+}
+.context-inner {
+  border-radius: 5px;
+  background-color: $card-bg-color;
+  padding:20px;
+  margin: 0;
+  box-shadow:$context-box-shadow;
+  -webkit-box-shadow: $context-box-shadow;
+  -moz-box-shadow: $context-box-shadow;
+  margin-top: 5px;
+
+}
+
+.type-header {
+  h2 {
+    font-weight: 500;
+    color: $header-color;
+  }
+}
+
+.buttons-outer {
+  overflow-x: auto;
+  display: flex;
+  height: 60px;
+  button {
+    min-width: 150px!important;
+    border-radius: 100px;
+    border: 1px solid $primary-btn-color;
+    color: $primary-btn-color;
+    margin-right: 10px;
+    height: 40px;
+
+    // active style
+    background: $primary-btn-color!important;
+    color:$active-route-color  !important;
+  }
+}
+
+.active-route {
+  background: $primary-btn-color!important;
+  color:$active-route-color  !important;
+}

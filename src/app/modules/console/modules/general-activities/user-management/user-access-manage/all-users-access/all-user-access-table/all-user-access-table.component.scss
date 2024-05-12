@@ -1,0 +1,36 @@
+.col-table{
+  overflow-x: scroll;
+}
+
+.books-table{
+  padding: 20px;
+  display: flex;
+  // align-items: ;
+  justify-content: flex-start;
+
+  h3{
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  h5{
+    white-space: nowrap;
+    font-size: 14px;
+    color: darkgrey;
+    font-weight: 500;
+  }
+
+  .grammer{
+    flex-basis: 33%;
+  }
+  .dialogs{
+    flex-basis: 33%;
+  }
+  .patterns{
+    flex-basis: 33%;
+  }
+  .sub{
+    font-weight: 700;
+    color: black;
+  }
+}

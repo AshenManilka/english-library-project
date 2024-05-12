@@ -1,0 +1,21 @@
+
+ <div class="book-wrapper">
+  <div class="close-button">
+    <div class="close">
+      <i class="bx bx-x" (click)="goBack()"></i>
+    </div>
+    <div class="reload">
+      <i class='bx bx-revision' (click)="reloadComponent()"></i>
+    </div>
+  </div>
+  <!-- <div class="footer"></div> -->
+  <div class="pdf-viewer">
+    <app-pdf-viewr [paid]="paid" [pdfSrc]="pdfSrc"></app-pdf-viewr>
+ </div>
+ </div>
+
+
+
+
+
+

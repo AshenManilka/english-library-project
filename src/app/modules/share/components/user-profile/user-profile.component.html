@@ -1,0 +1,56 @@
+<app-loading-spinner></app-loading-spinner>
+
+<div class="user-profile-wrapper">
+  <div class="icon">
+    <i class=' bx bx-x ' [mat-dialog-close]="true"></i>
+  </div>
+  <h1 mat-dialog-title>Update Your Profile </h1>
+  <div mat-dialog-content>
+    <form [formGroup]="form" (ngSubmit)="submitForm()">
+      <div class="container">
+        <div class="row py-2">
+          <div class="col-12 col-lg-4">
+            <div class="avtar-outer" (click)="fileInput.click()">
+              <input type="file" name="avatar" #fileInput id="avatar" (change)="onFileSelected($event) "
+                     style="display:none;">
+              <img [src]="avatar" alt="" class="avatar">
+            </div>
+          </div>
+          <div class="col-12 col-lg-8">
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Your Email</mat-label>
+                  <input matInput formControlName="email" readonly>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Your Name</mat-label>
+                  <input matInput formControlName="fullName">
+                </mat-form-field>
+              </div>
+              <div class="col-12 col-lg-6">
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-label>Your Mobile</mat-label>
+                  <input matInput formControlName="phone">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="button-outer">
+                  <button mat-raised-button cdkFocusInitial type="submit" class="update-profile-btn">Update Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- [mat-dialog-close]="true" -->

@@ -1,0 +1,50 @@
+<!-- <div class="outer">
+  <div class="inner">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{data.bookPreviewImage}}" alt="{{data.bookId}}">
+      <mat-card-content>
+        <mat-card-title>Book Name : {{data.bookName}}</mat-card-title>
+        <mat-card-subtitle>Book Id : {{data.bookId}}</mat-card-subtitle>
+        <mat-card-subtitle>Book Category : {{data.bookCategory}}</mat-card-subtitle>
+        <mat-card-subtitle>Book Pages : {{data.pages}}</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div> -->
+
+<mat-dialog-content >
+
+<div class="row" >
+  <div class=" book-card-outer" >
+
+    <div class="book-card-inner" >
+      <div class="book-cover-image-outer">
+        <img src= {{data.bookPreviewImage}} alt= {{data.bookId}}>
+      </div>
+      <div class="book-details-outer">
+        <div class="row">
+          <h2 class="book-title">{{data.bookName}}</h2>
+        </div>
+        <div class="row book-data">
+          <div class="col-6">
+            <p class="book-number">ID :  {{data.bookId}}</p>
+            <p class="pages">Pages : {{data.pages}}</p>
+          </div>
+          <div class="col-6">
+            <div class="view-button-outer">
+              <div class="view-button-inner" [attr.type]="'button'" (click)="viewBook(data.bookResource)">
+                View Book
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</mat-dialog-content>
+<!-- <mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close  >Cancel</button>
+</mat-dialog-actions> -->

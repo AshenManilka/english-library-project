@@ -1,0 +1,25 @@
+
+<div style="margin-top: 100px;"  class="terms-of-use-wrapper mb-3" id="#top">
+  <div class="container" >
+    <div class="row">
+      <div class="col-12">
+        <h1 >
+          Terms Of Use
+        </h1>
+      </div>
+    </div>
+  <mat-accordion>
+    <mat-expansion-panel  hideToggle   *ngFor="let tou of termsOfUse " (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{tou.title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <P [innerHTML]="tou.content" class="panel-content"></P>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+</div>
+
+

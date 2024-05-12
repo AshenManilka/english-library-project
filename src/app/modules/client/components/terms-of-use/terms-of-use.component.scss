@@ -1,0 +1,26 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+@import 'src/app/modules/share/styles/_mixin.scss';
+
+
+
+.bold-text{
+  font-weight: bold !important;
+}
+
+.terms-of-use-wrapper{
+  width: 100%;
+  min-height: 250px;
+  height: auto;
+  .container{
+    margin-top: 70px;
+    .bold{
+      font-weight: bold;
+      color: red;
+  }
+  }
+
+
+  }
+
+
+

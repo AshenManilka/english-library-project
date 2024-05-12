@@ -1,0 +1,82 @@
+@import 'src/app/modules/share/styles/_colors.scss';
+.row-outer {
+
+}
+.col-left {
+  padding: 0px 7px;
+}
+
+.col-right {
+  padding: 0px 7px;
+}
+
+.button-outer {
+  display: flex;
+  flex-direction: column;
+  background: $card-bg-color;
+  border: 1px solid $card-border-color;
+  box-shadow:$card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+  border-radius: 5px;
+  padding: 12px;
+  button {
+    width: 100%;
+    border: 1px solid $secondary-btn-color;
+    border-radius: 100px;
+    color: $secondary-btn-color;
+    margin-top: 12px;
+    padding: 8px 0px;
+  }
+
+  button:nth-child(1) {
+    margin-top: 0;
+  }
+}
+.button-outer:hover{
+  border: 1px solid $card-focus-border-color;
+}
+
+.active-route {
+  background: $secondary-btn-color;
+  color: $active-route-color!important;
+}
+
+.right-inner{
+  padding: 5px;
+  padding-bottom: 20px;
+  background: $card-bg-color;
+  border: 1px solid  $card-border-color;
+  box-shadow: $card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+  border-radius: 5px;
+  min-height: 100px;
+
+}
+.right-inner:hover{
+  border: 1px solid $card-focus-border-color;
+}
+
+@media only screen and (max-width: 754px) {
+
+  .col-right {
+    margin-top: 17px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .button-outer {
+    align-items: center;
+    button{
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 345px) {
+  .button-outer {
+    button{
+      width: 100%;
+    }
+  }
+}
+

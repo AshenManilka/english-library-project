@@ -1,0 +1,42 @@
+@mixin item-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin primary-class-btn($bg-color) {
+    padding: 15px;
+    background-color: $bg-color;
+    border-radius: 5px;
+    border: none;
+    color: $light-color;
+}
+
+@mixin section-divider($color, $position: bottom) {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 6000;
+
+    @if $position ==top {
+        bottom: 0;
+        transform: rotate(180deg);
+    }
+
+    @else {
+        top: 0;
+
+    }
+
+    svg {
+        position: relative;
+        display: block;
+        width: calc(123% + 1.3px);
+        height: 100px;
+    }
+
+    .shape-fill {
+        fill: $color;
+    }
+}
