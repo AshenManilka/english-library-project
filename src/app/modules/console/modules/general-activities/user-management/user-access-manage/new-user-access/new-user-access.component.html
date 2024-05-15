@@ -14,7 +14,7 @@
           <div class="col-12 col-lg-6">
             <mat-form-field appearance="outline" class="w-100">
               <mat-label>Select Access Type</mat-label>
-              <mat-select formControlName="accessType">
+              <mat-select formControlName="accessType"  (selectionChange)="onAccessTypeChange($event)">
                 <mat-option value="shortTimeSubscriber">Short Time Access</mat-option>
                 <mat-option value="yearlySubscriber">Yearly Access</mat-option>
                 <mat-option value="lifeTimeSubscriber">Life Time Access</mat-option>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12 col-lg-4">
+          <div  class="col-12 col-lg-4">
             <mat-form-field appearance="outline" class="w-100">
               <mat-label>Start Date</mat-label>
               <input matInput [matDatepicker]="startDatePicker" placeholder="Start Date"
@@ -32,7 +32,7 @@
               <mat-datepicker #startDatePicker></mat-datepicker>
             </mat-form-field>
           </div>
-          <div class="col-12 col-lg-4">
+          <div  *ngIf="!isLifetime" class="col-12 col-lg-4">
             <mat-form-field appearance="outline" class="w-100">
               <mat-label>End Date</mat-label>
               <input matInput [matDatepicker]="endDatePicker" placeholder="End Date" formControlName="endDate">

@@ -24,10 +24,17 @@
               <ng-container *ngFor="let testimonial of testimonials">
                 <ng-template carouselSlide>
                   <div class="col-12">
-                    <div class="testimonial-box-outer" >
+                    <div class="testimonial-box-outer">
                       <div class="testimonial-box-inner" >
                         <div class="quote"><i class="fa-solid fa-quote-left"></i></div>
-                        <img [src]="testimonial.image"  alt="reviews">
+                        <div class="profile">
+                          <img [src]="testimonial.profileImage" alt="profile-img">
+                          <p> {{testimonial.name}} </p>
+                        </div>
+                        <div class="review">
+                          <p>{{testimonial.review}}</p>
+                        </div>
+                        <!-- <img [src]="testimonial.image"  alt="reviews"> -->
                       </div>
                     </div>
                   </div>

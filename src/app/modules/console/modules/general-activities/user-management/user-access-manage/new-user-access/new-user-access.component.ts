@@ -4,6 +4,7 @@ import {AdminService} from "../../../../../../share/services/admin.service";
 import {LoadingService } from 'src/app/modules/share/services/loading.service';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {SnackBarService} from "../../../../../../share/services/snack-bar.service";
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-new-user-access',
@@ -19,6 +20,7 @@ export class NewUserAccessComponent implements OnInit {
   payedDate: Date = new Date();
   all: Array<any> = [];
   grantedAccesses: any[] = [];
+  isLifetime = false;
 
   constructor(
     private fireAuthService:AngularFireAuth,
@@ -78,6 +80,17 @@ export class NewUserAccessComponent implements OnInit {
   }
 
 
+  onAccessTypeChange(event: MatSelectChange) {
+
+    if(event.value === "lifeTimeSubscriber"){
+      this.isLifetime = true;
+    }
+    else{
+      this.isLifetime = false;
+    }
+
+
+  }
 
 
 }

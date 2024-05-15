@@ -36,9 +36,8 @@ landingSlidesStore: any[] = [];
   }
 
   // imageLink:string='https://plus.unsplash.com/premium_photo-1661598993003-ae2644019ce2?q=80&w=1555&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-  englishTitle:string='Any Idea In English';
-  sinhalaTitle:string=' ඉංග්‍රීසියෙන් ඕනෑම අදහසක් කියන්න';
-  subTitle:string='Any Idea in English Digital Library consists of Grammar, Sentence Patterns & Dialogues books with necessary clarifications in Sinhala.';
+
+  subTitle:string='Englishecholibary Digital Library consists of Grammar, Sentence Patterns & Dialogues books with necessary clarifications in Sinhala.';
 
 
   collapseNavbarHome() {
@@ -52,7 +51,7 @@ landingSlidesStore: any[] = [];
     this.landingSlidesStore = [
       {
         imageLink: this.imageLink,
-        titleText: this.englishTitle,
+        titleText: "Express your thoughts in English easily!",
         subTitleText: this.subTitle,
         buttonText: 'Free Books',
         buttonLink:'freeBook',
@@ -63,7 +62,7 @@ landingSlidesStore: any[] = [];
       {
 
         imageLink: this.imageLink,
-        titleText: this.sinhalaTitle,
+        titleText: "Speak your mind clearly in English!",
         subTitleText:  this.subTitle,
         buttonText: 'Video Lessons',
         buttonLink:'videoLessons',
@@ -74,7 +73,7 @@ landingSlidesStore: any[] = [];
       {
 
         imageLink: this.imageLink,
-        titleText: this.englishTitle,
+        titleText: "Think it, say it, in English!",
         subTitleText: this.subTitle,
         buttonText: 'Grammar Books',
         buttonLink:'grammar',
@@ -85,7 +84,7 @@ landingSlidesStore: any[] = [];
       {
 
         imageLink: this.imageLink,
-        titleText:  this.sinhalaTitle,
+        titleText:  "Express yourself in English, effortlessly!",
         subTitleText:  this.subTitle,
         buttonText: 'Sentence Patterns',
         buttonLink:'sentencePatterns',
@@ -96,7 +95,7 @@ landingSlidesStore: any[] = [];
       {
 
         imageLink: this.imageLink,
-        titleText: this.englishTitle,
+        titleText: "Easily share your thoughts in English!",
         subTitleText:  this.subTitle,
         buttonText: 'Dialogues',
         buttonLink:'dialogues',
@@ -118,7 +117,7 @@ landingSlidesStore: any[] = [];
     navSpeed: 700,
     dots: false,
     autoplay:true,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 2000,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
 

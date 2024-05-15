@@ -1,13 +1,14 @@
 @import 'src/app/modules/share/styles/_colors.scss';
 @import 'src/app/modules/share/styles/_mixin.scss';
 
-.review-page-wrapper{
+.review-page-wrapper {
   max-width: 100vw;
   position: relative;
   background-color: #ffffff !important;
+
   .custom-shape-divider-bottom {
     // margin-top: 50px;
-    @include section-divider(#F3F3F3 !important,bottom);
+    @include section-divider(#F3F3F3 !important, bottom);
     transform: scaleX(-1);
   }
 }
@@ -16,17 +17,20 @@
 .testimonial-outer {
 
   padding: 100px 0;
+
   .testimonial-inner {
-    h1{
+    h1 {
       font-weight: 800;
       font-size: 40px;
       text-align: center;
       line-height: 1.5;
       color: $heading-color;
     }
+
     .testimonial-carousel-outer {
 
-      padding: 20px 0px ;
+      padding: 20px 0px;
+
       .testimonial-box-outer {
 
         display: flex;
@@ -34,6 +38,7 @@
         justify-content: center;
         flex-direction: column;
         padding-top: 25px;
+
         .testimonial-box-inner {
 
           position: relative;
@@ -43,15 +48,50 @@
           background-color: #f3f3f3;
           border-radius: 10px;
           z-index: 2000;
-          img{
+          min-height: 220px;
+          height: auto;
+          width: 100%;
+          padding-bottom: 15px;
+
+          .profile {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 50px;
+
+
+            img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50px;
+              margin-top: 10px;
+            }
+            p {
+              padding-left: 10px;
+              padding-top: 20px;
+              font-weight: 500;
+            }
+          }
+          .review{
+            padding: 5px;
+            border-radius:10px;
+            margin-top: 15px;
+            background-color: white;
+            font-weight: 400;
+
+
+          }
+
+          img {
             width: 320px;
             border-radius: 10px;
           }
+
           .quote {
             position: absolute;
             font-size: 40px;
             top: -20px;
-            left: 0;
+            left: 15px;
             color: $primary-color;
             z-index: 3000;
 
@@ -59,18 +99,18 @@
               color: $primary-color;
             }
           }
-          }
         }
       }
+    }
   }
 }
 
 
 
-@media (min-width:1400px){
+@media (min-width:1400px) {
 
 
-  .review-page-wrapper{
+  .review-page-wrapper {
     max-width: 100vw;
     position: relative;
 
@@ -84,19 +124,20 @@
     .testimonial-inner {
 
 
-  h1 {
-    margin-top: 10px;
-    font-weight: 800;
-    font-size: 60px;
-    text-align: center;
-    line-height: 1.5;
-    color: $heading-color;
-    padding: 10px 30px;
+      h1 {
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 60px;
+        text-align: center;
+        line-height: 1.5;
+        color: $heading-color;
+        padding: 10px 30px;
 
-  }
+      }
 
     }
   }
+
   .testimonial-carousel-outer {
     .testimonial-box-outer {
       display: flex;
@@ -129,17 +170,17 @@
 
 
 
-        }
       }
     }
   }
+}
 
 
 
-.section-dev{
+.section-dev {
   position: relative;
 
-  .custom-footer-divider-top{
+  .custom-footer-divider-top {
     // margin-top: 50px;
     // transform: scaleX(-1);
     @include section-divider(#2D3436, top);
@@ -147,22 +188,24 @@
 }
 
 
-@media (max-width:600px){
-  .review-page-wrapper{
-  }
+@media (max-width:600px) {
+  .review-page-wrapper {}
+
   //testimonial-section
   .testimonial-outer {
     .testimonial-inner {
-      h1{
+      h1 {
         font-size: 30px;
       }
+
       .testimonial-carousel-outer {
         .testimonial-box-outer {
           .testimonial-box-inner {
-            img{
+            img {
               width: 300px;
               border-radius: 10px;
             }
+
             .quote {
               position: absolute;
               font-size: 40px;
@@ -170,14 +213,12 @@
               left: 0px;
               color: $primary-color;
               z-index: 3000;
-              .fa-quote-left {
 
-              }
-            }
+              .fa-quote-left {}
             }
           }
         }
+      }
     }
   }
 }
-
