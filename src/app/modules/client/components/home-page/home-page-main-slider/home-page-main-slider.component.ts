@@ -117,7 +117,7 @@ landingSlidesStore: any[] = [];
     navSpeed: 700,
     dots: false,
     autoplay:true,
-    autoplayTimeout: 2000,
+    autoplayTimeout: 3000,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
 
